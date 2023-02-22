@@ -1,30 +1,40 @@
-const beat = "R,L,R,L";
+//*Beat key S = snare K = Kick T1 = Tom 1 T2 = Tom 2 F = Floor tom . = rest H = High hat C = crash R = ride
+//TODO: Add bpm setter, add pause play, add timeline bar
+
+const beat = "S,K,T1,T2,F,H,C,R";
 var beatArray = beat.split(",");
+
+const baseColor = "#000";
+const blinkTime = 100;
 
 var bpm = 60;
 let interval = (60 / bpm) * 1000;
 var t = setInterval(DisplayBeat, interval);
 
-function wait(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
-
 let i = 0;
 function DisplayBeat() {
-  if (i < +beatArray.length) {
-    blink(beatArray[i]);
+  if (i < beatArray.length) {
+    if (beatArray[i] == ".") return i++;
+    if (beatArray[i].indexOf(" ") >= 0) {
+      let currentBeatArray = beatArray[i].split(" ");
+
+      currentBeatArray.forEach((e) => {
+        blink(e);
+      });
+    } else blink(beatArray[i]);
+
     i++;
   }
 }
 
 function blink(drum) {
-  if (document.getElementById(drum)) {
-    var d = document.getElementById(drum);
+  var d = document.getElementById(drum);
+
+  d.style.backgroundColor =
+    d.style.backgroundColor == d.dataset.color ? baseColor : d.dataset.color;
+
+  setTimeout(function () {
     d.style.backgroundColor =
-      d.style.backgroundColor == "pink" ? "black" : "pink";
-  }
+      d.style.backgroundColor == d.dataset.color ? baseColor : d.dataset.color;
+  }, blinkTime);
 }

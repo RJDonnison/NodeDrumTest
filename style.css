@@ -1,8 +1,48 @@
-#R,
-#L,
 .drum {
-  width: 20vw;
-  height: 20vw;
   border-radius: 100%;
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#S {
+  width: 14vh;
+  height: 14vh;
+}
+
+#K {
+  width: 22vh;
+  height: 22vh;
+}
+
+#T1 {
+  width: 10vh;
+  height: 10vh;
+}
+
+#T2 {
+  width: 12vh;
+  height: 12vh;
+}
+
+#F {
+  width: 14vh;
+  height: 14vh;
+}
+
+#H {
+  width: 14vh;
+  height: 14vh;
+}
+
+#C {
+  width: 14vh;
+  height: 14vh;
+}
+
+#R {
+  width: 16vh;
+  height: 16vh;
 }
