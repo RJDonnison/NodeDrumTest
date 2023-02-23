@@ -1,7 +1,8 @@
 //*Beat key S = snare K = Kick T1 = Tom 1 T2 = Tom 2 F = Floor tom . = rest H = High hat C = crash R = ride space between drums on same beat and comma between beats
 //TODO: add pause, add timeline bar
 
-const beat = "S,.,S,.,S,S,T1,.,T1,.,T1,T1,F,.,S,.,F,S,S,R,.,C,.,H,.,K,.,T2,T2";
+const beat =
+  "H K,.,H,.,H S,.,H,.,H,.,H K,.,H S,.,H,.,T1 K,T1,T1,T1,S K,S,S,S,T2 K,T2,T2,T2,F K,F,F,F,C K";
 var beatArray = beat.split(",");
 
 const blinkTime = 200;
@@ -33,7 +34,7 @@ function DisplayBeat() {
   }
 }
 
-//!BPM > 240 causing colors to stick on when playing more than 2 beats in a row
+//!BPM > 240 causing colors to stick on when playing more than 2 beats of same drum in a row
 function blink(drum) {
   var audio = new Audio(`audio/${drum}.wav`);
   audio.play();
