@@ -7,42 +7,72 @@
   color: white;
 }
 
+#kit {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
 #S {
   width: 14vh;
   height: 14vh;
+  position: relative;
+  top: 15vh;
+  left: 52%;
 }
 
 #K {
+  border-radius: 0;
   width: 22vh;
-  height: 22vh;
+  height: 11vh;
+  position: relative;
+  left: 50%;
 }
 
 #T1 {
   width: 10vh;
   height: 10vh;
+  position: relative;
+  top: 7%;
+  left: 36%;
 }
 
 #T2 {
   width: 12vh;
   height: 12vh;
+  position: relative;
+  top: 7%;
+  left: 38%;
 }
 
 #F {
   width: 14vh;
   height: 14vh;
+  position: relative;
+  top: 15vh;
+  left: 36%;
 }
 
 #H {
   width: 14vh;
   height: 14vh;
+  position: relative;
+  top: 15vh;
+  right: 1%;
 }
 
 #C {
   width: 14vh;
   height: 14vh;
+  position: relative;
+  top: 1%;
+  right: 3%;
 }
 
 #R {
   width: 16vh;
   height: 16vh;
+  position: relative;
+  left: 12%;
 }

@@ -5,15 +5,18 @@ const beat = "H K,H,H S,H,H K,H,H S,H";
 var beatArray = beat.split(",");
 
 const baseColor = "#000";
-const blinkTime = 100;
+const blinkTime = 200;
 
 var i = 0;
-
+var playBeat;
 function play() {
-  var bpm = document.getElementById("input").value;
+  let bpm = document.getElementById("input").value;
+  console.log(bpm);
   let interval = (60 / bpm) * 1000;
+  console.log(interval);
   i = 0;
-  setInterval(DisplayBeat, interval);
+  clearInterval(playBeat);
+  playBeat = setInterval(DisplayBeat, interval);
 }
 
 function DisplayBeat() {
