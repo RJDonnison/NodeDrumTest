@@ -1,5 +1,5 @@
 //*Beat key S = snare K = Kick T1 = Tom 1 T2 = Tom 2 F = Floor tom . = rest H = High hat C = crash R = ride space between drums on same beat and comma between beats
-//TODO: add pause, add timeline bar
+//TODO: add pause, add timeline bar, add beat input
 
 const beat =
   "H K,.,H,.,H S,.,H,.,H,.,H K,.,H S,.,H,.,T1 K,T1,T1,T1,S K,S,S,S,T2 K,T2,T2,T2,F K,F,F,F,C K";
