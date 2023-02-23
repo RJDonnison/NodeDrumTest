@@ -15,7 +15,6 @@ body {
   align-items: center;
   color: white;
   background-color: #000000;
-  /* outline: solid 3px rgb(192, 192, 192); */
 }
 
 #kit {
@@ -28,6 +27,10 @@ body {
 #S {
   width: 14vh;
   height: 14vh;
+
+  color: rgb(0, 0, 0);
+  background-color: rgb(209, 223, 223);
+
   position: relative;
   top: 15vh;
   left: 52%;
