@@ -1,7 +1,7 @@
 //*Beat key S = snare K = Kick T1 = Tom 1 T2 = Tom 2 F = Floor tom . = rest H = High hat C = crash R = ride
 //TODO: Add bpm setter, add pause play, add timeline bar
 
-const beat = "S,K,T1,T2,F,H,C,R";
+const beat = "H K,H,H S,H,H K,H,H S,H";
 var beatArray = beat.split(",");
 
 const baseColor = "#000";
