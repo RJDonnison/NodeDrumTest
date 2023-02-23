@@ -1,10 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #151515;
+}
+
 .drum {
   border-radius: 100%;
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  background-color: #000000;
+  /* outline: solid 3px rgb(192, 192, 192); */
 }
 
 #kit {
@@ -57,6 +68,9 @@
 #H {
   width: 14vh;
   height: 14vh;
+
+  background-color: rgb(205, 127, 50);
+
   position: relative;
   top: 15vh;
   right: 1%;
@@ -65,6 +79,9 @@
 #C {
   width: 14vh;
   height: 14vh;
+
+  background-color: rgb(205, 127, 50);
+
   position: relative;
   top: 1%;
   right: 3%;
@@ -73,6 +90,9 @@
 #R {
   width: 16vh;
   height: 16vh;
+
+  background-color: rgb(205, 127, 50);
+
   position: relative;
   left: 12%;
 }

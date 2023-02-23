@@ -1,20 +1,19 @@
-//*Beat key S = snare K = Kick T1 = Tom 1 T2 = Tom 2 F = Floor tom . = rest H = High hat C = crash R = ride
-//TODO: Add bpm setter, add pause play, add timeline bar
+//*Beat key S = snare K = Kick T1 = Tom 1 T2 = Tom 2 F = Floor tom . = rest H = High hat C = crash R = ride space between drums on same beat and comma between beats
+//TODO: add pause, add timeline bar
 
-const beat = "H K,H,H S,H,H K,H,H S,H";
+const beat = "S,.,S,.,S,S,T1,.,T1,.,T1,T1,F,.,S,.,F,S,S,R,.,C,.,H,.,K,.,T2,T2";
 var beatArray = beat.split(",");
 
-const baseColor = "#000";
 const blinkTime = 200;
 
 var i = 0;
 var playBeat;
 function play() {
   let bpm = document.getElementById("input").value;
-  console.log(bpm);
   let interval = (60 / bpm) * 1000;
-  console.log(interval);
+
   i = 0;
+
   clearInterval(playBeat);
   playBeat = setInterval(DisplayBeat, interval);
 }
@@ -34,9 +33,13 @@ function DisplayBeat() {
   }
 }
 
+//!BPM > 240 causing colors to stick on when playing more than 2 beats in a row
 function blink(drum) {
-  var d = document.getElementById(drum);
+  var audio = new Audio(`audio/${drum}.wav`);
+  audio.play();
 
+  var d = document.getElementById(drum);
+  var baseColor = d.style.backgroundColor;
   d.style.backgroundColor =
     d.style.backgroundColor == d.dataset.color ? baseColor : d.dataset.color;
 
