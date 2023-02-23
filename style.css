@@ -6,6 +6,52 @@
 
 body {
   background-color: #151515;
+  overflow-y: hidden;
+}
+
+#text {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  z-index: 10;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 1vh 0.2vw;
+  margin: 0.4vh 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  width: 80%;
+}
+
+button {
+  border: none;
+  color: black;
+  padding: 1vh 2vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+#kit {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 5%;
 }
 
 .drum {
@@ -17,19 +63,12 @@ body {
   background-color: #000000;
 }
 
-#kit {
-  width: 80vw;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-}
-
 #S {
   width: 14vh;
   height: 14vh;
 
   color: rgb(0, 0, 0);
-  background-color: rgb(209, 223, 223);
+  background-color: rgb(227, 227, 227);
 
   position: relative;
   top: 15vh;

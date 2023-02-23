@@ -4,10 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="author" content="Reuben Donnison" />
+    <title>Drum Sim</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="text">
+      <h1>Beat input</h1>
+      <p>
+        Beat key S = snare K = Kick T1 = Tom 1 T2 = Tom 2 F = Floor tom . = rest
+        H = High hat C = crash R = ride <br />
+        Leave a space between drums on same beat and comma between beats
+      </p>
+      <input
+        type="text"
+        name="beat"
+        value="H K,.,H,.,H S,.,H,.,H,.,H K,.,H S,.,H,.,T1 K,T1,T1,T1,S K,S,S,S,T2 K,T2,T2,T2,F K,F,F,F,C K"
+        id="inputBeat"
+      />
+      <input type="number" name="BPM" value="60" id="inputBPM" />
+      <button id="play" onclick="play()">Play</button>
+    </div>
+
     <div id="kit">
       <!--* Snare -->
       <div id="S" data-color="rgb(187, 208, 255)" class="drum">
@@ -34,8 +52,6 @@
       <!--* Ride -->
       <div id="R" data-color="rgb(185, 251, 192)" class="drum"><p>Ride</p></div>
     </div>
-    <input type="number" name="BPM" value="60" id="input" />
-    <button id="play" onclick="play()">Play</button>
   </body>
 </html>
 
