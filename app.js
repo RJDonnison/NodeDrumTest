@@ -7,9 +7,11 @@ var beatArray = beat.split(",");
 const baseColor = "#000";
 const blinkTime = 100;
 
-var bpm = 60;
-let interval = (60 / bpm) * 1000;
-var t = setInterval(DisplayBeat, interval);
+function play() {
+  var bpm = document.getElementById("input").value;
+  let interval = (60 / bpm) * 1000;
+  setInterval(DisplayBeat(), interval);
+}
 
 let i = 0;
 function DisplayBeat() {
